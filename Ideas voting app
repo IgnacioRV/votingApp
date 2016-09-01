@@ -1,0 +1,13 @@
+Ideas voting app:
+Backend:
+	Create user/ login as user 
+	DB: 
+		Collection -> votes
+			POST: Increment number of votes for x, where x is passed as a param 
+			GET: GET a JSON with a vector with a pair {party, votes}
+Frontend: 
+	2 pages: index and voting/results
+	 	Index: show all possible votations
+	 		-> On ready make ajax request and get a vector with all the possible poll questions
+	 	Voting: HTML with a div 
+	 		-> On ready call the server (with an ajax request) to insert buttons for what you can vote for and make a graph with the results

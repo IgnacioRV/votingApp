@@ -1,27 +1,38 @@
 <!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Log In to your account</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
 
-<html>
+    <link rel="stylesheet" href="/public/css/style.css">
 
-	<head>
-		<title>Clementine.js - The elegant and lightweight full stack JavaScript boilerplate.</title>
-		
-		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
-	</head>
+    
+    
+    
+  </head>
 
-	<body>
-		<div class="container">	
-			<div class="login">
-				<img src="/public/img/clementine_150.png" />
-				<br />
-				<p class="clementine-text">Clementine.js</p>
-				<a href="/auth/github">
-					<div class="btn" id="login-btn">
-						<img src="/public/img/github_32px.png" alt="github logo" />
-						<p>LOGIN WITH GITHUB</p>
-					</div>
-				</a>
-			</div>
-		</div>
-	</body>
+  <body>
 
+    <h1 id = "Title" class ="text-center"> Log In as user </h1>
+<div id ="input" class="text-center">
+  <input type="text" id = "username" placeholder ="username">
+  <input type="text" id = "password" placeholder ="password">
+</div>
+
+<div id ="submit" class="text-center">
+  <button id ="Submit" class ="btn btn-success"> Log In </button>
+  <a href ="/create"><button id ="Create" class ="btn btn-info"> Create new account </button></a>
+  </div>
+    
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>  
+  <script type="text/javascript" src="controllers/loginAccount.client.js"></script>
+    
+    
+    
+    
+  </body>
 </html>

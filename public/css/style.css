@@ -1,0 +1,15 @@
+input {
+  width:50%;
+  margin:5px;
+}
+
+#submit{
+  padding:1%;
+}
+#input{
+  margin-top: 0px;
+}
+
+#polls .btn{
+ margin:2px;
+}

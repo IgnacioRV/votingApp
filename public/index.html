@@ -1,39 +1,36 @@
 <!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Voting 1.0</title>
+    
+    
+    
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/public/css/style.css">
 
-<html>
+  </head>
 
-	<head>
-		<title>Clementine.js - The elegant and lightweight full stack JavaScript boilerplate.</title>
-		
-		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
-	</head>
+  <body>
 
-	<header>
-		<p>Welcome, <span id="display-name"></span>!</p>
-		<a class="menu" href="/profile">Profile</a>
-		<p>|</p>
-		<a class="menu" href="/logout">Logout</a>
-	</header>
+    <h5 id ="status" class ="text-right"> You aren't logged in, <a href ="/login">Log In</a> or <a href ="/create">Create account</a></h5> 
+<h1 id = "Title" class ="text-center"> Voting 1.0 </h1>
+<h5 class ="text-center">Created by Ignacio Rasche for FCC</h5>
 
-	<body>
-		<div class="container">
-			<img src="/public/img/clementine_150.png" />
-			<br />
-			<p class="clementine-text">Clementine.js</p>
-		</div>
-	
-		<div class="container">
-			<p>You have clicked the button <span id="click-nbr"></span> times.</p>
-			<br />
-			<div class="btn-container">
-				<button type="submit" class="btn btn-add">CLICK ME!</button>
-				<button class="btn btn-delete">RESET</button>
-			</div>
-		</div>
-		
-		<script type="text/javascript" src="common/ajax-functions.js"></script>
-		<script type="text/javascript" src="controllers/clickController.client.js"></script>
-		<script type="text/javascript" src="controllers/userController.client.js"></script>
-	</body>
+<div id ="submit" class="text-center">
+  <a href="/login"><button id ="Login" class ="btn btn-success"> Log In </button></a>
 
+  <a href ="/create"><button id ="Create" class ="btn btn-info"> Create new account </button></a>
+   </div>
+<div id ="polls" class="text-center">
+  <div class ="col-xs-12">
+  <button class = "btn btn-default"> Poll #1 </button>
+  </div>
+</div>
+    
+    
+    
+    
+    
+  </body>
 </html>
