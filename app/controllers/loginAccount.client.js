@@ -9,6 +9,7 @@
 
    
    submitButton.addEventListener('click', function () {
+    
         $.ajax({
             url: apiUrl,
              data: { 

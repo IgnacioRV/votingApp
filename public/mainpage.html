@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>PollMainPage</title>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/public/css/mainpage.css">
+
+    
+    
+    
+  </head>
+
+  <body>
+
+    <h5 id ="status" class ="text-right"> Logged in as <span id = "name">XXXX</span> </h5> 
+<h1 id = "Title" class ="text-center"> Main page </h1>
+
+
+<button id = "toggle" class ="col-xs-8 col-xs-offset-2 btn btn-primary"> Add poll </button>
+<div id ="creation" class ="hiden col-xs-8 col-xs-offset-2 text-center">
+  <input type = "text" placeholder = "Input new poll title" id ="tit" class="form-control" >
+  <input type = "text" placeholder = "Input option #1" id ="opt1" class="form-control" >
+  <input type = "text" placeholder = "Input option #2" id ="opt2" class="form-control" >
+  <input type="submit" id = "send" class = "btn btn-success">
+  
+</div>
+<div id ="polls" class="text-center">
+  <h3 class ="col-xs-12">Your polls: </h3>
+  <div class ="col-xs-12" id ="list">
+  </div>
+</div>
+<h5 class ="text-center col-xs-8 col-xs-offset-2">Created by Ignacio Rasche for FCC</h5>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script type="text/javascript" src="controllers/mainpage.client.js"></script>
+    
+    
+    
+    
+  </body>
+</html>

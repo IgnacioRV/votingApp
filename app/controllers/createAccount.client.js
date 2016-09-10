@@ -22,7 +22,7 @@
           type: "POST",
           success: function(response) {
               alert(response.message)
-              if (response.message == "Ok"){
+              if (response.status == "Ok"){
                  location.href = "/login";
               }
           },

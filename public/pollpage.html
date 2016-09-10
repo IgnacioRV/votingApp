@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>PollMainPage</title>
+    <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css'>
+    <link rel="stylesheet" href="/public/css/mainpage.css">
+  </head>
+
+  <body>
+
+    <h5 id ="status" class ="text-right"> Logged in as <span id = "name">XXXX</span> <a href = "/login">logout</a></h5> 
+<div id ="polls" class="text-center">
+  <h3 class ="col-xs-12" id = "polltitle">Poll title </h3>
+  <div class ="col-xs-12" id ="list">
+  </div>
+</div>
+
+<button id = "toggle" class ="col-xs-8 col-xs-offset-2 btn btn-primary"> Add option </button>
+<div id ="creation" class ="hiden col-xs-8 col-xs-offset-2 text-center">
+  <input type = "text" placeholder = "Input new option" id ="opt" class="form-control" >
+  <input type="submit" id = "send" class = "btn btn-success">  
+</div>
+
+<h5 class ="text-center col-xs-8 col-xs-offset-2">Created by Ignacio Rasche for FCC</h5>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script type="text/javascript" src= "/controllers/pollpage.client.js"></script>  
+    
+    
+    
+  </body>
+</html>
