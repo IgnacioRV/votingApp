@@ -1,5 +1,6 @@
 var name; 
 var id; 
+var v = [['option', 'votes']];
  var userUrl = window.location.origin+'/api/getuser';
    var addOptUrl = window.location.origin+'/api/addoption';
    var voteForUrl = window.location.origin+'/api/votefor';
@@ -68,8 +69,10 @@ var id;
             	
             response.opt.forEach((value, index)=>{
               var option = response.opt[index].name;
-              console.log(option);
-               
+              var unit = [option, response.opt[index].votes];
+              v.push(unit);
+              console.log(v);
+              console.log("name: "+option +" votes: "+ response.opt[index].votes);
               var r=$('<input/>').attr({
                   type: "button",
                   value: option,
@@ -83,6 +86,7 @@ var id;
               });
                         
             });
+            loadChart();
 			
           },
           error: function(xhr) {
@@ -90,6 +94,22 @@ var id;
           }
       });
 
+      function loadChart(){
+	  google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable(v);
+
+        var options = {
+          title: 'Poll results'
+        };
+
+        var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+        chart.draw(data, options);
+        document.getElementById('piechart').style.display = 'none';
+      }
+  	}
       
 })();
 function voteFor(option){
@@ -116,4 +136,9 @@ function voteFor(option){
 $("#toggle").click(function(){
 	console.log("clicked");
       $("#creation").slideToggle(500);
+});
+
+$("#showresult").click(function(){
+	console.log("clicked");
+      $("#piechart").slideToggle(500);
 });
