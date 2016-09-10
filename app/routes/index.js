@@ -312,6 +312,7 @@ module.exports = function (app, passport) {
 		.post(function (req, res ){
 
 		});
+	app.get('/favicon.ico', function (req, res){})
 }
 
 function parsePost(request, callback){
