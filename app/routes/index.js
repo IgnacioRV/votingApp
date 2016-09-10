@@ -275,7 +275,33 @@ module.exports = function (app, passport) {
 	        }
 	        parsePost(request, logIn);
 		});
+	app.route('/api/delPoll')
+		.post(function (req, res){
+			var del = function (POST){
+				mongo.connect(dbUrl, function (err, db){
+					var polls = db.collection('polls');
 
+					var query = {
+						_id: new ObjectId(POST.id)
+					}
+
+					polls.remove(query, (err)=>{
+						if (err) throw err 
+						else {
+							console.log("poll removed");
+							var resObj = {
+							            	"status" : "Ok", 
+							            	"message": "Poll deleted"
+							            } ;
+							res.send(resObj);
+							}
+					}
+					);
+					db.close();
+				});
+			};
+			parsePost(req, del);
+		});	
 	app.route('/:name/:id')
 		.get(function (req, res){
 			res.sendFile(path +"/public/pollpage.html");

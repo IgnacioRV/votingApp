@@ -14,3 +14,7 @@ input {
 .hiden {
      display:none;
 }
+
+#list .btn:focus{
+	background-color: #41bbbf;
+}

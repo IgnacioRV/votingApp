@@ -1,19 +1,22 @@
 var name; 
 var id; 
+var selected; 
 var v = [['option', 'votes']];
  var userUrl = window.location.origin+'/api/getuser';
    var addOptUrl = window.location.origin+'/api/addoption';
    var voteForUrl = window.location.origin+'/api/votefor';
    var pollUrl = window.location.origin+'/api/poll';
    var route = window.location.pathname; 
+   var voteButton = document.querySelector('#vote');
    var submitButton = document.querySelector('#send');
    var option = document.querySelector("#opt");
 (function () {
 	// Make an ajax call to get all the poll options and the title, get which poll from the path 
 	// Create a button for each option, which on click sends a post to /api/votefor 
 	// in the post data we should send the poll and the option we vote for
-
-  
+	voteButton.addEventListener('click', function() { 
+              	voteFor(selected);
+  	});
 
   	submitButton.addEventListener('click', function() {
   		$.ajax({
@@ -82,7 +85,8 @@ var v = [['option', 'votes']];
 
               $("#list").append(r); 
               $("#button"+index).click(function() {
-              	voteFor(option);
+              	selected = option;
+              	document.getElementById("button"+index).class = "btn btn-info";
               });
                         
             });
