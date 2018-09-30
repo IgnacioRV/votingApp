@@ -2,7 +2,7 @@ Voting App for Free Code Camp using user authentication, storing users and polls
 
 node server.js
 
-The running app can also be found at https://powervoter.herokuapp.com
+The running app can also be found at https://powervoter.herokuapp.com (This is not working anymore as the DB instances were shut down)
 
 The app was started using ClementineJS 
 
